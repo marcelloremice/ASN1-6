@@ -2,14 +2,14 @@
  A class that holds a grade for assessment.
  */
 public class Assessment {
-    private int score;  // Numeric score
+    private double score;  // Numeric score
 
     /**
      The setScore method sets the score field.
      @param s The value to store in score.
      */
 
-    public void setScore(int s)
+    public void setScore(double s)
     {
         this.score = s;
     }
@@ -19,7 +19,7 @@ public class Assessment {
      @return The value stored in the score field.
      */
 
-    public int getScore()
+    public double getScore()
     {
         return this.score;
     }
@@ -34,7 +34,7 @@ public class Assessment {
     {
         char letterGrade;
         //use switch statement to determine letter grade from score
-        switch (this.score / 10) {
+        switch ((int) (this.score * 10)) {
             case 10:
             case 9:
                 letterGrade = 'A';
